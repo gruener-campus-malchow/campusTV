@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<script type="text/javascript" src="jquery.min.js" ></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+<title>Title of campusTV</title>
+<style type="text/css">
+body {
+    background: rgb(255,0,255);
+    font-family: ubuntu, ubuntubeta, 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 auto;
+}
+
+div.clockwork {
+	background: #94b990;
+	font-family: ubuntu, ubuntubeta, 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    /*line-height: 22px;*/
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;    
+    width: 290px;
+    /*height: 30px;*/
+    text-shadow: 2px 2px #68a75f;
+    
+    position: absolute;
+    top: 192px;
+    right: 0px;
+   
+}
+
+div.programmsymbol {
+    font-family: ubuntu, ubuntubeta, 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+        text-shadow: 2px 2px #68a75f;
+	background: white;
+	background-image:url(programmsymbol.jpeg);
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-size: 100%;
+	margin: 0 auto;
+	padding: 10px 10px 10px 10px;
+	width: 230px;
+    height: 130px;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+
+}
+
+img{
+    margin-bottom: 3px;
+}
+
+
+</style>
+</head>
+<body>
+ 	
+ 	<div class="programmsymbol">
+ 	
+ 		tv@gcm.schule
+ 	</div>
+    
+     <div class="clockwork">
+     
+      
+  	<div name="B4" id="B4"></div>
+     </div>
+     <!-- 
+     <div class="titlebox_left">
+     
+     </div>
+     
+        <div id="titlebox_right">
+     
+     </div>
+      -->
+     <!--   
+     	<input type="button" value="nur Datum" name="B2" id="B2" />
+     	<input type="button" value="nur Datum" name="B4" id="B4" />     
+     	 <div name="B2" id="B2"></div>
+     -->
+
+<script type='text/javascript'>
+<!--
+function zeitzeigen()
+{
+	
+	var heute = new Date();
+	var tag = heute.getDate();
+	var mon = heute.getMonth() + 1;
+	var jah = heute.getYear();
+	
+	var std = heute.getHours();
+	var min = heute.getMinutes();
+	var sek = heute.getSeconds();
+	if (jah < 1900) jah += 1900;
+
+
+	if(tag < 10){tag = "0" + tag};
+	if(mon < 10){mon = "0" + mon};
+	if(std < 10){std = "0" + std};
+	if(min < 10){min = "0" + min};
+	if(sek < 10){sek = "0" + sek};
+		
+	var aktdat = tag + "." + mon + "." + jah;
+	
+	var genzei = aktdat + " um " + std + ":" + min + ":" + sek + " Uhr";
+
+	
+	//document.getElementById('B2').value=aktdat;
+
+	//document.getElementById('B2').innerHTML=aktdat;
+	
+	document.getElementById('B4').innerHTML=genzei;
+
+	setTimeout("zeitzeigen()",1000);
+	
+}
+
+
+
+//-->
+</script>
+
+<script type="text/javascript">zeitzeigen();</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
